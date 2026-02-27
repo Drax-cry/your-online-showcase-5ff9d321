@@ -252,7 +252,7 @@
   </div>
 
   <script>
-    const API_URL = 'http://localhost:3001';
+    const API_URL = 'https://steelblue-panther-922996.hostingersite.com';
 
     async function handlePayment(event) {
       event.preventDefault();
@@ -271,10 +271,10 @@
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({
-            email,
-            priceId: 'price_1T5NdgFozY5OfncchXgROjUD',
-          }),
+        body: JSON.stringify({
+          email,
+          priceId: 'price_1T5NdgFozY5OfncchXgROjUD',
+        }),
         });
 
         if (!response.ok) {
@@ -289,10 +289,11 @@
         }
       } catch (err) {
         console.error('Erro:', err);
-        errorDiv.textContent = err.message || 'Erro ao iniciar pagamento. Tente novamente.';
+        errorDiv.textContent = err.message || 'Erro ao iniciar pagamento. Verifique sua conexão e tente novamente.';
         errorDiv.classList.add('show');
         btn.disabled = false;
         btn.textContent = 'Começar agora - Pagar com Stripe';
+        document.getElementById('email').focus();
       }
     }
   </script>
