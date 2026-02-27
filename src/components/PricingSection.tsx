@@ -60,7 +60,7 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="max-w-md mx-auto bg-card rounded-2xl p-8 shadow-sm hover:shadow-card-hover transition-all duration-300 border border-primary/20">
+        <div className="max-w-md mx-auto bg-card rounded-2xl p-8 shadow-sm hover:shadow-card-hover transition-all duration-300 border-2 border-primary/40">
           <div className="text-center mb-6">
             <p className="text-5xl font-extrabold text-foreground">
               €5
